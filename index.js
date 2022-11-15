@@ -12,7 +12,7 @@ const app =express();
 app.use(express.json());
 
 app.use(cors({
-    origin:"*"
+    origin:"https://63739a5956899402725c837a--profound-elf-ff7067.netlify.app"
 }))
 
 app.post("/verify-email", async function(req,res){
@@ -46,7 +46,7 @@ if(mail){
     from:"akaran3007@gmail.com",
     to:`${mail.email}`,
     subject:"Reseting the password",
-    text:`http://localhost:3000/reset?code=${token}`
+    text:`https://63739a5956899402725c837a--profound-elf-ff7067.netlify.app/reset?code=${token}`
    }
     sender.sendMail(composeEmail,(err)=>{
         if(err){
